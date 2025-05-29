@@ -1,0 +1,178 @@
+:root {
+    --blue: #2157ea;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.limited-width {
+    width: 1300px;
+    max-width: calc(100% - 4rem);
+    margin: auto;
+}
+
+header {
+    position: fixed;
+    /* Already present, kept for fixed positioning */
+    top: 0;
+    /* Ensure header stays at top */
+    left: 0;
+    /* Align to left edge */
+    width: 100%;
+    /* Full viewport width */
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+    /* Existing shadow */
+    padding: 1rem 0;
+    /* Existing padding */
+    background: #fff;
+    /* Added to ensure background (adjust per design) */
+    z-index: 1000;
+    /* Ensure header and dropdowns stay above content */
+}
+
+header .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    display: grid;
+    align-items: center;
+    gap: 0rem;
+
+    & img {
+        width: 200px;
+    }
+
+    & h1 {
+        font-size: 1rem;
+    }
+}
+
+header nav {
+    display: flex;
+    gap: 0rem;
+    margin-left: 3cm;
+}
+
+header nav a,
+header nav .link {
+    text-decoration: none;
+    color: #033f71;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    border-radius: 8px;
+    padding: 10px 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown .menu a {
+    color: white;
+    padding: 12px 20px;
+    display: block;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown .menu a:hover {
+    background-color: rgba(55, 139, 222, 0.1);
+    padding-left: 25px;
+}
+
+.dropdown:hover .menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Optional: Style for the dropdown trigger */
+.dropdown .trigger {
+    padding: 12px 20px;
+    background: #3498db;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    display: inline-block;
+}
+
+.dropdown:hover .trigger {
+    background: #2980b9;
+}
+
+.blue {
+    color: var(--blue);
+}
+
+button {
+    background-color: var(--blue);
+    padding: .5rem 1.5rem;
+    border-radius: 5rem;
+    border: 0;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.quote-button {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.quote-button button {
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quote-button button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.quote-button button:focus {
+    outline: 2px solid #1e40af;
+    outline-offset: 2px;
+}
+
+.quote-button button:active {
+    transform: translateY(0);
+}
+

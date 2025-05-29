@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accounting And Bookkeeping Solutions</title>
+    <!-- CSS -->
+    <!-- global -->
+    <link rel="stylesheet" href="../style/global.css">
+
+    <!-- page-specific -->
+    <link rel="stylesheet" href="../style/index.css">
+        <link rel="stylesheet" href="../style/accounting-and-bookkeeping-services.css">
+    <!-- JS -->
+    <script src="../scripts/layout.js" type="module"></script>
+  <!-- CSS -->
+ 
+</head>
+
+<body>
+  <header></header>
+
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>Accounting And Bookkeeping Solutions</h1>
+      </div>
+      <div class="join-team">
+        <h2>How we can help?</h2>
+        <form action="https://formsubmit.co/sarath.ks29@gmail.com" method="POST">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_subject" value="New Carrier Registration">
+          <input type="hidden" name="_cc" value="sarath.ks29@gmail.com">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="first-name">First Name <span class="text-red-500">*</span></label>
+              <input type="text" id="first-name" name="first_name" required placeholder="First Name" aria-required="true">
+            </div>
+            <div>
+              <label for="last-name">Last Name <span class="text-red-500">*</span></label>
+              <input type="text" id="last-name" name="last_name" required placeholder="Last Name" aria-required="true">
+            </div>
+          </div>
+          <div>
+            <label for="company-name">Company Name</label>
+            <input type="text" id="company-name" name="company_name" placeholder="Company Name">
+          </div>
+          <div>
+            <label for="email">Email <span class="text-red-500">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="Email" aria-required="true">
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <div class="flex">
+              <select id="country-code" name="country_code">
+                <option value="+1">+1 (US)</option>
+                <option value="+44">+44 (UK)</option>
+                <option value="+91">+91 (IN)</option>
+              </select>
+              <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+            </div>
+          </div>
+          <div>
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Your Message"></textarea>
+          </div>
+          <button type="submit">Register Now</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro-section" id="intro-section">
+    <div class="intro-container">
+      <div class="intro-text">
+        <h2 id="dynamic-heading">Accounting And Bookkeeping Services</h2>
+        <p>
+          We offer customized accounting and bookkeeping services designed to assist businesses 
+          in accurately managing their financial records. Trust us to handle your financial needs, 
+          allowing you to concentrate on expanding your business.
+        </p>
+        <p>
+          Managing your business finances can be overwhelming, but we’re here to help. 
+          We offer professional bookkeeping and accounting services tailored to businesses 
+          that need support in organizing their financial records, tracking expenses, 
+          and ensuring compliance with tax regulations.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Boxes Sections -->
+  <section class="feature-boxes">
+    <div class="feature-card">
+      <img src="/images/book-keeping.jpg" alt="Feature 1" />
+      <h3>Book keeping</h3>
+      <p>Accurate record-keeping, bank reconciliations, and financial organization</p>
+      <button onclick="loadContent('Bookkeeping')">Read More</button>
+    </div>
+    <div class="feature-card">
+      <img src="/images/report.jpg" alt="Feature 2" />
+      <h3>Financial Reporting</h3>
+      <p>Profit & loss statements, balance sheets, and cash flow management</p>
+      <button onclick="loadContent('FinancialReporting')">Read More</button>
+    </div>
+    <div class="feature-card">
+      <img src="/images/tax.jpg" alt="Feature 3" />
+      <h3>Tax Preparation And Filing</h3>
+      <p>Assistance with business taxes, GST/HST filings, and year-end reports</p>
+      <button onclick="loadContent('TaxPreparationAndFiling')">Read More</button>
+    </div>
+  </section>
+  <section class="feature-boxes">
+    <div class="feature-card">
+      <img src="/images/payroll.jpg" alt="Feature 1" />
+      <h3>Payroll Management</h3>
+      <p>Employee payroll processing and tax deductions</p>
+      <button onclick="loadContent('PayrollManagement')">Read More</button>
+    </div>
+    <div class="feature-card">
+      <img src="/images/apr.png" alt="Feature 2" />
+      <h3>Accounts Payable And Receivable</h3>
+      <p>Invoice tracking and payment processing</p>
+      <button onclick="loadContent('AccountsPayableAndReceivable')">Read More</button>
+    </div>
+    <div class="feature-card">
+      <img src="/images/budget-fore.jpg" alt="Feature 3" />
+      <h3>Budgeting And Forecasting</h3>
+      <p>Helping you plan and optimize your financial future</p>
+      <button onclick="loadContent('BudgetingAndForecasting')">Read More</button>
+    </div>
+  </section>
+  <footer></footer>
+
+  <!-- JS Logic -->
+  <script>
+    function loadContent(type) {
+      const introSection = document.getElementById("intro-section");
+
+      let header = "";
+      let content = "";
+
+      switch (type) {
+        case "Bookkeeping":
+          header = "Book keeping";
+          content = "Managing your business finances shouldn’t be stressful or time-consuming. Our professional bookkeeping \
+          services ensure your records are accurate, up-to-date, and compliant, allowing you to focus on growing your business.\
+          We provide reliable financial tracking, expense management, bank reconciliation, and customized reporting to give you\
+           a clear picture of your company’s financial health. Whether you're a small business or a growing enterprise, our tailored\
+            solutions will help you stay organized and make informed financial decisions.\
+            We provide accurate and organized bookkeeping, including transaction recording, expense tracking, bank reconciliations, \
+            and financial reporting to keep your business finances on track.";
+          break;
+        case "FinancialReporting":
+          header = "Financial Reporting";
+          content = "Gain clear insights into your business's financial health with our comprehensive financial reporting services.\
+           We provide accurate, timely, and customized reports to help you track performance, manage cash flow, and make informed\
+            business decisions.Our services include profit and loss statements, balance sheets, cash flow reports, and other key financial\
+             metrics tailored to your business needs. Whether you're planning for growth, seeking investor confidence, or ensuring compliance,\
+              our detailed reports give you the clarity you need.\
+              Get clear, detailed financial reports to understand your business’s performance. We provide profit and loss statements,\
+               balance sheets, cash flow reports, and customized insights to help you make informed decisions.";
+          break;
+        case "TaxPreparationAndFiling":
+          header = "Tax Preparation & Filing";
+          content = "Navigating taxes can be complex, but we make the process seamless and stress-free. Our professional tax preparation\
+           and filing services ensure accuracy, compliance, and maximized deductions, helping you keep more of your hard-earned money.\
+           We handle personal and business tax filings, ensuring all necessary forms are completed correctly and submitted on time.\
+            Whether you're a small business owner, self-employed, or managing corporate taxes, we tailor our services to fit your unique\
+             needs.\
+             We ensure accurate tax preparation and filing for your business, maximizing deductions and staying compliant with tax regulations.\
+              Let us handle your GST/HST, corporate, and payroll tax filings with confidence.";
+          break;
+        case "PayrollManagement":
+          header = "Payroll Management";
+          content = "Ensure your employees are paid accurately and on time with our reliable payroll management services. We handle everything \
+          from wage calculations and tax deductions to direct deposits and government remittances, ensuring full compliance with labor laws\
+           and tax regulations.Our payroll solutions are tailored to businesses of all sizes, helping you save time, reduce errors, and stay\
+            stress-free. Whether you have salaried employees, hourly workers, or independent contractors, we streamline the process so you can\
+             focus on running your business.\
+             We handle payroll deductions and contributions for your employees, set up payroll accounts for remitting deductions, and ensure \
+             accurate income deduction reporting.";
+          break;
+        case "AccountsPayableAndReceivable":
+          header = "Accounts Payable And Receivable";
+          content = "Maintain healthy cash flow and organized finances with our professional accounts payable and receivable management services.\
+           We ensure your bills are paid on time, invoices are processed efficiently, and outstanding payments are tracked to keep your\
+            business financially stable.Our services include invoice generation, payment processing, vendor management, reconciliation, and\
+             aging reports to give you a clear view of your financial position. With accurate record-keeping and timely follow-ups,\
+              we help you minimize delays and improve your financial operations.\
+              We manage your invoices, payments, and collections to keep your cash flow healthy. From tracking expenses and vendor payments\
+               to invoicing clients and following up on outstanding balances, we ensure smooth financial operations.";
+          break;
+        case "BudgetingAndForecasting":
+          header = "Budgeting And Forecasting";
+          content = "Plan for financial success with our expert budgeting and forecasting services. We help businesses create realistic budgets,\
+           anticipate future expenses, and develop data-driven financial strategies to support growth and stability.Our services\
+            include cash flow projections, revenue forecasting, expense planning, and financial analysis tailored to your\
+             business goals. By understanding your financial trends and potential challenges, we equip you with the insights \
+             needed to make informed decisions and stay ahead.\
+             Plan for the future with confidence. We help you create realistic budgets, analyze financial trends, and develop forecasts\
+              to guide your business toward growth and stability.";
+          break;
+        default:
+          content = "";
+      }
+
+      if (content) {
+        introSection.innerHTML = `
+          <h2 id="dynamic-heading">${header}</h2>
+          <p>${content}</p>
+        `;
+        introSection.style.backgroundColor = "#f9fbfc";
+        const yOffset = -80;
+        const y = introSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+.quote {
+    background: linear-gradient(90deg, #004986 0%, #00A3E0 100%);
+    color: white;
+    border-radius: 20px;
+    margin: 2rem auto;
+    max-width: 1350px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.quote .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+    padding: 1.5rem; /* Slightly increased for better spacing */
+}
+
+.quote .inner h3 {
+    font-size: clamp(2rem, 5vw, 2.5rem); /* Responsive font size */
+    margin: 0;
+}
+
+.quote .inner > * {
+    max-width: 1000px;
+    width: 100%; /* Ensure full width within max-width */
+}
+
+.quote .inner button {
+    background-color: white;
+    color: #004986;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.quote .inner button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.quote .inner p {
+    line-height: 1.3;
+    margin: 0;
+    font-size: clamp(1rem, 3vw, 1.1rem); /* Responsive font size */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) { /* Adjusted to cover tablets */
+    .quote {
+        margin: 1.5rem;
+        max-width: 95%;
+    }
+
+    .quote .inner {
+        padding: 1.25rem;
+        gap: 1rem;
+    }
+
+    .quote .inner h3 {
+        font-size: clamp(1.8rem, 4.5vw, 2.2rem);
+    }
+
+    .quote .inner > * {
+        max-width: 90%;
+    }
+
+    .quote .inner p {
+        line-height: 1.4;
+    }
+
+    .quote .inner button {
+        padding: 0.65rem 1.25rem;
+    }
+}
+
+@media (max-width: 480px) { /* For smaller phones */
+    .quote {
+        margin: 1rem;
+        max-width: 90%;
+    }
+
+    .quote .inner {
+        padding: 1rem;
+        gap: 0.8rem;
+    }
+
+    .quote .inner h3 {
+        font-size: clamp(1.5rem, 4vw, 1.8rem);
+    }
+
+    .quote .inner p {
+        line-height: 1.5;
+        font-size: clamp(0.9rem, 2.8vw, 1rem);
+    }
+
+    .quote .inner button {
+        padding: 0.5rem 1rem;
+        font-size: clamp(0.8rem, 2.2vw, 0.9rem);
+    }
+}

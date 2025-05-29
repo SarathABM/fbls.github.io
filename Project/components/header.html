@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Header</title>
+  <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style/global.css">
+</head>
+<body>
+
+<header>
+  <div class="inner limited-width">
+    <div class="logo">
+      <img src="/images/logo-new.webp" alt="FREIGHT BOARD LOGISTICS SERVICES" />
+    </div>
+
+    <!-- Hamburger for small screens -->
+    <button class="hamburger" aria-label="Toggle Menu">&#9776;</button>
+
+    <!-- Nav has class nav-links that JS will toggle -->
+    <nav class="nav-links">
+      <div class="dropdown">
+        <a href="/index.html"><button class="link">HOME</button></a>
+        <div class="menu">
+          <a href="/components/about.html">About Us</a>
+          <a href="/components/contact-us.html">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="#"><button class="link">OUR SERVICES</button></a>
+        <div class="menu">
+          <a href="/components/freight-and-logistics-solutions.html">Freight And Logistics Solutions</a>
+          <a href="/components/accounting-and-bookkeeping-solutions.html">Accounting And Bookkeeping Solutions</a>
+          <a href="/components/online-courses.html">Online Courses</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="#"><button class="link">INDUSTRIES</button></a>
+        <div class="menu">
+          <a href="/components/farm-freight.html">Farm Freight</a>
+          <a href="/components/retailer-and-distributors.html">Retailer And Distributors</a>
+          <a href="/components/factories-and-manufacturing.html">Factories And Manufacturing</a>
+          <a href="/components/health-care-and-pharmaceutical-equipment.html">Health Care and Pharmaceutical Equipment</a>
+          <a href="/components/oil-and-gas-industry.html">Oil and Gas Industry</a>
+          <a href="/components/construction-and-building-materials.html">Construction and Building Materials</a>
+          <a href="/components/auto-transport.html">Auto Transport</a>
+          <a href="/components/timber-and-logging-freight.html">Timber and Logging Freight</a>
+          <a href="/components/hot-shot.html">Hot Shot</a>
+          <a href="/components/textiles-and-apparel.html">Textiles and Apparel</a>
+        </div>
+      </div>
+
+      <a href="/components/shippers.html"><button class="link">SHIPPERS</button></a>
+      <a href="/components/carriers.html"><button class="link">CARRIERS</button></a>
+
+      <a href="/components/request-quote.html" class="quote-button">
+        <button aria-label="Request a Free Quote">Get Your Free Quote</button>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", function () {
+      navLinks.classList.toggle("open");
+    });
+  });
+</script>
+
+</body>
+</html>

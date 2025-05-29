@@ -1,0 +1,208 @@
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+    }
+
+    body {
+        background: linear-gradient(135deg, #679dea, #E6F0FA);
+        color: #333;
+        line-height: 1.6;
+    }
+
+/* Hero Section */
+.hero {
+background: linear-gradient(rgba(116, 113, 113, 0.5), rgba(0, 0, 0, 0.5)), url("/images/shippers.jpg") center/cover no-repeat;
+color: #fff;
+text-align: center;
+padding: 6rem 1rem;
+width: 100%;
+margin-bottom: 4rem;
+}
+
+.hero h1 {
+padding-top: 10%;
+font-size: 2.5rem;
+font-weight: bold;
+margin-bottom: 1.5rem;
+}
+.hero p {
+
+font-size: 1.5rem;
+font-weight: bold;
+
+}
+
+    .signup-form {
+        background: #FFFFFF;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        max-width: 600px;
+        margin: 2rem auto;
+    }
+
+    .signup-form h2 {
+        color: #2061B6;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .form-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .form-group.full-width {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #333;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #2061B6;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: #104080;
+        box-shadow: 0 0 5px rgba(32, 97, 182, 0.3);
+    }
+
+    .form-group textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    .submit-btn {
+        background: #2061B6;
+        color: #FFFFFF;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+        display: block;
+        margin: 1rem auto;
+    }
+
+    .submit-btn:hover {
+        background: #104080;
+    }
+
+    .section {
+        max-width: 1200px;
+        margin: 4rem auto;
+        padding: 0 2rem;
+    }
+
+    .section h2 {
+        color: #2061B6;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .section p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .feature-item {
+        background: #FFFFFF;
+        padding: 1.5rem;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .equipment-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .equipment-item {
+        background: #E6F0FA;
+        padding: 1rem;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    .quote-section {
+        text-align: center;
+        padding: 4rem 2rem;
+        background: #FFFFFF;
+        border-radius: 8px;
+        margin: 2rem auto;
+        max-width: 800px;
+    }
+
+    .quote-btn {
+        background: #2061B6;
+        color: #FFFFFF;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 1.2rem;
+        display: inline-block;
+        margin-top: 1rem;
+    }
+
+    .quote-btn:hover {
+        background: #104080;
+    }
+
+    footer {
+        background: #2061B6;
+        color: #FFFFFF;
+        text-align: center;
+        padding: 1rem 0;
+        margin-top: 4rem;
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+    padding: 4rem 1rem;
+}
+
+.hero h1 {
+    font-size: 2rem;
+}
+.hero p {
+    font-size: 2rem;
+}
+        .form-group {
+            grid-template-columns: 1fr;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+        }
+    }
+
+        

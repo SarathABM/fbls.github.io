@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request a Quote</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <!-- global -->
+    <link rel="stylesheet" href="../style/global.css">
+    <!-- page-specific -->
+    <link rel="stylesheet" href="../style/index.css">
+    <link rel="stylesheet" href="../style/quote.css">
+
+    <!-- JS -->
+    <script src="../scripts/layout.js" type="module"></script>
+ 
+
+<body>
+    <header></header>
+    <div class="container">
+        <form action="https://formsubmit.co/sarath.ks29@gmail.com" method="POST">
+            <h3>Company Details</h3>
+            <div class="mb-3">
+                <label for="companyName" class="form-label required">Company Name</label>
+                <input type="text" class="form-control" id="companyName" name="companyName" required>
+            </div>
+            <div class="mb-3">
+                <label for="contactName" class="form-label required">Contact Name</label>
+                <input type="text" class="form-control" id="contactName" name="contactName" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label required">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label required">Phone</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required>
+            </div>
+
+            <h3>Pickup Details</h3>
+            <div class="mb-3">
+                <label for="pickupCountry" class="form-label required">Country/Region</label>
+                <select class="form-select" id="pickupCountry" name="pickupCountry" required>
+                    <option value="">Select a country</option>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="MX">Mexico</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="pickupAddress" class="form-label required">Address</label>
+                <input type="text" class="form-control" id="pickupAddress" name="pickupAddress" required>
+            </div>
+            <div class="mb-3">
+                <label for="pickupCity" class="form-label required">City</label>
+                <input type="text" class="form-control" id="pickupCity" name="pickupCity" required>
+            </div>
+            <div class="mb-3">
+                <label for="pickupPostalCode" class="form-label required">Zip / Postal Code</label>
+                <input type="text" class="form-control" id="pickupPostalCode" name="pickupPostalCode" required>
+            </div>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="pickupDate" class="form-label">Pickup Date</label>
+                    <input type="date" class="form-control" id="pickupDate" name="pickupDate">
+                </div>
+                <div class="col-md-6">
+                    <label for="pickupTime" class="form-label">Pickup Time</label>
+                    <input type="time" class="form-control" id="pickupTime" name="pickupTime">
+                </div>
+            </div>
+
+            <h3>Delivery Details</h3>
+            <div class="mb-3">
+                <label for="country" class="form-label required">Country/Region</label>
+                <select class="form-select" id="country" name="country" required>
+                    <option value="">Select a country</option>
+                    <option value="US">United States</option>
+                    <option value="CA">Canada</option>
+                    <option value="MX">Mexico</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="address" class="form-label required">Address</label>
+                <input type="text" class="form-control" id="address" name="address" required>
+            </div>
+            <div class="mb-3">
+                <label for="city" class="form-label required">City</label>
+                <input type="text" class="form-control" id="city" name="city" required>
+            </div>
+            <div class="mb-3">
+                <label for="postalCode" class="form-label required">Zip / Postal Code</label>
+                <input type="text" class="form-control" id="postalCode" name="postalCode" required>
+            </div>
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="deliveryDate" class="form-label">Delivery Date</label>
+                    <input type="date" class="form-control" id="deliveryDate" name="deliveryDate">
+                </div>
+                <div class="col-md-6">
+                    <label for="deliveryTime" class="form-label">Delivery Time</label>
+                    <input type="time" class="form-control" id="deliveryTime" name="deliveryTime">
+                </div>
+            </div>
+
+            <h3>Special Delivery Instructions</h3>
+            <div class="radio-group mb-3">
+                <label><input type="radio" name="specialInstructions" value="Yes" onclick="toggleInput()"> Yes</label>
+                <label><input type="radio" name="specialInstructions" value="No" checked onclick="toggleInput()">
+                    No</label>
+            </div>
+            <div class="mb-3">
+                <label for="specialDetails" class="form-label">Details</label>
+                <input type="text" class="form-control" id="specialDetails" name="specialDetails" disabled>
+            </div>
+
+            <script>
+                function toggleInput() {
+                    const yesRadio = document.querySelector('input[name="specialInstructions"][value="Yes"]');
+                    const detailsInput = document.getElementById('specialDetails');
+                    detailsInput.disabled = !yesRadio.checked;
+                }
+            </script>
+
+            <h3>Freight Details</h3>
+            <div class="mb-3">
+                <label for="cargoType" class="form-label required">Cargo Type</label>
+                <select class="form-select" id="cargoType" name="cargoType" required>
+                    <option value="">Select cargo type</option>
+                    <option value="General">General Freight</option>
+                    <option value="Perishable">Perishable Goods</option>
+                    <option value="Hazardous">Hazardous Materials</option>
+                    <option value="Oversized">Oversized Load</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="weight" class="form-label required">Weight (lbs)</label>
+                <input type="number" class="form-control" id="weight" name="weight" min="0" required>
+            </div>
+            <div class="mb-3">
+                <label for="dimensions" class="form-label">Dimensions (L x W x H, ft)</label>
+                <input type="text" class="form-control" id="dimensions" name="dimensions"
+                    placeholder="e.g., 10 x 4 x 5">
+            </div>
+            <div class="mb-3">
+                <label for="freightRequirements" class="form-label">Special Freight Requirements</label>
+                <textarea class="form-control" id="freightRequirements" name="freightRequirements"
+                    placeholder="e.g., Refrigeration, Fragile, etc."></textarea>
+            </div>
+
+            <div class="d-flex justify-content-end mt-4">
+
+                <button type="submit">Send</button>
+
+            </div>
+            <input type="hidden" name="_template" value="table">
+        </form>
+    </div>
+
+    <footer></footer>
+</body>
+
+</html>

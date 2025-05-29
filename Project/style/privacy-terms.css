@@ -1,0 +1,163 @@
+
+/* General Body Styles */
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(116, 113, 113, 0.5), rgba(0, 0, 0, 0.5)), url("/images/About-BG-image.jpg") center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 6rem 1rem;
+    width: 100%;
+    margin-bottom: 4rem;
+    /* Added margin to separate from Section 1 */
+}
+
+.hero h1 {
+    padding-top: 10%;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    /* Increased for better spacing */
+}
+
+
+/* Content Section */
+.content-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.content-part {
+    padding: 20px;
+}
+
+/* Main Headings (Privacy Policy, Terms of Use) */
+.content-part > h1,
+.content-part > h2,
+.content-part > h3 {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #004986;
+    margin: 40px 0 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Subheadings (e.g., 1. Information We Collect) */
+.content-part h4 {
+    font-size: 1.6em;
+    font-weight: 600;
+    color: #00a3e0;
+    margin: 30px 0 15px;
+    line-height: 1.4;
+}
+
+/* Paragraphs */
+.content-part p {
+    font-size: 1.1em;
+    color: #555;
+    margin: 15px 0;
+    line-height: 1.8;
+}
+
+/* Lists */
+.content-part ul {
+    list-style-type: disc;
+    padding-left: 40px;
+    margin: 15px 0;
+}
+
+.content-part li {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+/* Email Links */
+.content-part a {
+    color: #00a3e0;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.content-part a:hover {
+    color: #0052cc;
+    text-decoration: underline;
+}
+
+/* Spacing for Repeated Headings (e.g., "Terms of Use" repeated) */
+.content-part > h1 + h1,
+.content-part > h2 + h2,
+.content-part > h3 + h3 {
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .content-section {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    .content-part > h1,
+    .content-part > h2,
+    .content-part > h3 {
+        font-size: 1.8em;
+    }
+
+    .content-part h4 {
+        font-size: 1.4em;
+    }
+
+    .content-part p,
+    .content-part li {
+        font-size: 1em;
+    }
+
+    .content-part ul {
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.6em;
+    }
+
+    .content-part > h1,
+    .content-part > h2,
+    .content-part > h3 {
+        font-size: 1.5em;
+    }
+
+    .content-part h4 {
+        font-size: 1.2em;
+    }
+
+    .content-part p,
+    .content-part li {
+        font-size: 0.95em;
+    }
+}

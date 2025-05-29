@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Course</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="/style/global.css">
+  <link rel="stylesheet" href="/style/index.css">
+  <link rel="stylesheet" href="/style/online-courses.css">
+  <!-- JS -->
+  <script src="/scripts/layout.js" type="module"></script>
+
+ 
+</head>
+
+<body class="bg-gray-50 font-sans text-gray-800">
+  <header></header>
+
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>Online Course</h1>
+      </div>
+      <div class="join-team">
+        <h2>How we can help?</h2>
+        <form action="https://formsubmit.co/sarath.ks29@gmail.com" method="POST">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_subject" value="New Carrier Registration">
+          <input type="hidden" name="_cc" value="sarath.ks29@gmail.com">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="first-name">First Name <span class="text-red-500">*</span></label>
+              <input type="text" id="first-name" name="first_name" required placeholder="First Name" aria-required="true">
+            </div>
+            <div>
+              <label for="last-name">Last Name <span class="text-red-500">*</span></label>
+              <input type="text" id="last-name" name="last_name" required placeholder="Last Name" aria-required="true">
+            </div>
+          </div>
+          <div>
+            <label for="company-name">Company Name</label>
+            <input type="text" id="company-name" name="company_name" placeholder="Name">
+          </div>
+          <div>
+            <label for="email">Email <span class="text-red-500">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="Placeholder">
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <div class="flex">
+              <select id="country-code" name="country_code">
+                <option value="+1">+1 (US)</option>
+                <option value="+44">+44 (UK)</option>
+                <option value="+91">+91 (India)</option>
+              </select>
+              <input type="tel" id="Phone Number" name="phone" placeholder="Phone Number">
+            </div>
+          </div>
+          <div>
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Your Message"></textarea>
+          </div>
+          <button type="submit">Register Now</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro-section" id="intro-section">
+    <div class="intro-container">
+      <div class="intro-left">
+        <div class="intro-content-block">
+          <h2>Online Course</h2>
+          <p>
+            Gain the skills, experience, and confidence you need before you hit the road. Our comprehensive online course is designed to equip you with essential knowledge, whether you're a first-time truck driver or looking to refresh your expertise. Build the foundation for a confident and successful career in trucking.
+          </p>
+        </div>
+        <div class="intro-content-block">
+          <h2>Why Choose Us?</h2>
+          <p>
+            Our courses feature interactive lessons, real-world scenarios, and expert guidance. Learn everything from safe driving practices to industry regulations, ensuring you're fully prepared for a long-term career in the road.
+          </p>
+        </div>
+      </div>
+      <div class="intro-right">
+        <img src="/images/about-section1.jpeg" alt="Online Course Image">
+        <p>
+          Designed by industry experts, our courses deliver practical, real-world training to prepare you for the challenges of the trucking industry.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Boxes Sections -->
+  <section class="feature-boxes">
+    <div class="feature-card">
+      <img src="/images/tax-dri-eva.webp" alt="Truck Driver Evaluation">
+      <h3>Truck Driver Evaluation</h3>
+      <p>(This Program is Physical)</p>
+      <button class="read-more" onclick="loadContent('TruckDriverEvaluation')">Read More</button>
+    </div>
+    <div class="feature-card">
+      <img src="/images/tdg.webp" alt="Hazmat/TDG for Instructor">
+      <h3>Hazmat/TDG for Instructor</h3>
+      <p>(Online Course)</p>
+      <button class="read-more" onclick="loadContent('HazmatTDGForInstructor')">Read More</button>
+    </div>
+    <div class="feature-card">
+      <img src="/images/tdg-driver.jpg" alt="Hazmat/TDG for Driver">
+      <h3>Hazmat/TDG for Driver</h3>
+      <p>(Online Course)</p>
+      <button class="read-more" onclick="loadContent('HazmatTDGForDriver')">Read More</button>
+    </div>
+  </section>
+
+  <footer></footer>
+
+  <!-- JS Logic -->
+  <script>
+    function loadContent(type) {
+      const introSection = document.getElementById("intro-section");
+
+      const contentData = {
+        TruckDriverEvaluation: {
+          left: [
+            {
+              heading: "TRUCK DRIVER EVALUATION",
+              content: "Get excited about our Truck Driver Evaluation program! For just $50 per hour with your own truck, you can take advantage of this fantastic opportunity, with a minimum of 4 hours to maximize your experience!"
+            },
+            {
+              heading: "Why Choose Our Evaluation?",
+              content: "Ensures drivers meet company standards before starting work. Reduces liability risks and enhances road safety. Helps identify training needs to improve driver performance."
+            }
+          ],
+          right: {
+            image: "/images/tax-dri-eva-main.jpg",
+            content: "Our Driver Evaluation Program is designed to assess your skills and build your confidence before you hit the road.",
+            priceDuration: "Price: <strong>$50.00/Hrs</strong><br>Duration: <strong>4 Hours</strong>"
+          }
+        },
+        HazmatTDGForInstructor: {
+          left: [
+            {
+              heading: "Hazmat/TDG Program",
+              content: "Our Hazmat/TDG (Transportation of Dangerous Goods) Instructor Program is a comprehensive online course. Designed for individuals looking to become certified instructors, this program provides in-depth training on the safe handling, transportation, and regulatory requirements of hazardous materials."
+            },
+            {
+              heading: "Why Train as an Instructor?",
+              content: "With flexible online learning, industry-relevant content, and expert guidance, this course equips you with the knowledge and skills to train others in compliance with Hazmat and TDG regulations. Whether you’re an experienced professional or new to instruction, our program is tailored to help you succeed as a certified Hazmat/TDG trainer. Enroll today and take the next step in your career!"
+            }
+          ],
+          right: {
+            image: "/images/tdg-driver-main.webp",
+            content: "The Hazardous Materials Transportation of Dangerous Goods (TDG) Instructor Program is designed to equip trainers with the necessary knowledge and instructional techniques to effectively teach TDG regulations and best practices.",
+            priceDuration: "Price: <strong>$500</strong><br>Duration: <strong>3 Weeks</strong>"
+          }
+        },
+        HazmatTDGForDriver: {
+          left: [
+            {
+              heading: "Hazmat/TDG Program",
+              content: "Our Hazmat/TDG (Transportation of Dangerous Goods) Program for Drivers is a fully online course. This program is designed to provide truck drivers with the essential knowledge and certification required to safely transport hazardous materials in compliance with Transport Canada and DOT regulations."
+            },
+            {
+              heading: "Course Advantages",
+              content: "Through interactive learning and real-world scenarios, drivers will gain a solid understanding of hazard classifications, proper handling procedures, documentation requirements, and emergency response protocols. Whether you're new to Hazmat/TDG transportation or need to renew your certification, this course ensures you stay compliant and confident on the road."
+            }
+          ],
+          right: {
+            image: "/images/tdg-driver-main.jpg",
+            content: "Our Transportation of Dangerous Goods (TDG) certification course is designed for truck drivers, shippers, handlers, and anyone involved in transporting hazardous materials.",
+            priceDuration: "Price: <strong>$60.00</strong><br>Duration: <strong>6 Hours</strong>"
+          }
+        }
+      };
+
+      const data = contentData[type] || {
+        left: [
+          { heading: "Online Course", content: "Gain the Skills, Experience, and Confidence Before You Hit the Road. Prepare for your career on the road with our comprehensive online course designed to equip you with the essential skills and knowledge." },
+          { heading: "Why Choose Us?", content: "Through interactive lessons, real-world scenarios, and expert guidance, you’ll learn everything from safe driving practices to industry regulations." }
+        ],
+        right: {
+          image: "/images/about-section1.jpeg",
+          content: "Our courses are designed by industry experts to provide practical, hands-on learning that prepares you for real-world challenges in the trucking industry.",
+          priceDuration: ""
+        }
+      };
+
+      introSection.innerHTML = `
+        <div class="intro-container">
+          <div class="intro-left">
+            <div class="intro-content-block">
+              <h2>${data.left[0].heading}</h2>
+              <p>${data.left[0].content}</p>
+            </div>
+            <div class="intro-content-block">
+              <h2>${data.left[1].heading}</h2>
+              <p>${data.left[1].content}</p>
+            </div>
+          </div>
+          <div class="intro-right">
+            <img src="${data.right.image}" alt="${type} Image">
+            <p>${data.right.content}</p>
+            <div class="price-duration">${data.right.priceDuration}</div>
+          </div>
+        </div>
+      `;
+
+      introSection.style.backgroundColor = "#f9fbfc";
+      const yOffset = -80;
+      const y = introSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  </script>
+</body>
+
+</html>

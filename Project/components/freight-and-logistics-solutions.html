@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Freight & Logistics Solutions</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../style/global.css" />
+  <link rel="stylesheet" href="../style/index.css" />
+  <link rel="stylesheet" href="../style/freight-and-logistics-solutions.css" />
+  <!-- JS -->
+  <script src="../scripts/layout.js" type="module"></script>
+ 
+</head>
+
+<body>
+  <header></header>
+
+  <section class="hero">
+    <h1>Freight & Logistics Solutions</h1>
+  </section>
+
+  <!-- Intro Section (will be updated dynamically) -->
+  <section class="intro-section" id="intro-section">
+    <h2 id="dynamic-heading">Freight Forwarders</h2>
+    <p>Streamline your supply chain with our reliable and efficient freight and logistics solutions.
+      Whether you need freight brokerage, transportation management, or freight forwarding services,
+      we provide customized solutions to move your goods safely and on time.
+    </p>
+    <p>
+      Our expertise covers dry van, reefer, flatbed, and oversized loads across Canada and the USA.
+      With a strong network of carriers and industry-leading logistics strategies,
+      we optimize routes, reduce costs, and ensure seamless transportation from origin to destination.
+      Partner with us for hassle-free logistics and dependable freight solutions. Contact us today to get started!
+    </p>
+  </section>
+
+  <!-- 3 Image Boxes Section -->
+  <section class="feature-boxes">
+    <div class="feature-card">
+      <img src="/images/solutions.jpg" alt="Feature 1" />
+      <h3>Freight Solutions</h3>
+      <button onclick="loadContent('shipping')">Read More</button>
+    </div>
+    <div class="feature-card">
+      <img src="/images/transp-coord.jpg" alt="Feature 2" />
+      <h3>Transportation Coordination Solutions</h3>
+      <button onclick="loadContent('tracking')">Read More</button>
+    </div>
+    <div class="feature-card">
+      <img src="/images/forwarders.jpg" alt="Feature 3" />
+      <h3>Freight Forwarders</h3>
+      <button onclick="loadContent('global')">Read More</button>
+    </div>
+  </section>
+
+  <footer></footer>
+
+  <!-- JS Logic -->
+  <script>
+    function loadContent(type) {
+      const introSection = document.getElementById("intro-section");
+
+      let header = "";
+      let content = "";
+
+      switch (type) {
+        case "shipping":
+          header = "Reliable Shipping";
+          content = "Our shipping solutions are designed to ensure timely, safe, and efficient delivery. We use advanced routing and tracking systems to manage every shipment with precision.";
+          break;
+        case "tracking":
+          header = "Real-Time Tracking";
+          content = "Get end-to-end visibility on all shipments through our cutting-edge tracking platform. Monitor delays, optimize logistics, and gain valuable insights in real-time.";
+          break;
+        case "global":
+          header = "Global Reach";
+          content = "With partners and hubs in over 100 countries, we provide seamless international freight forwarding services that open new markets and streamline operations.";
+          break;
+        default:
+          content = "";
+      }
+
+      if (content) {
+        // Update intro section with new content
+        introSection.innerHTML = `
+          <h2 id="dynamic-heading">${header}</h2>
+          <p>${content}</p>
+        `;
+
+        // Optional: re-apply styling
+        introSection.style.backgroundColor = "#f9fbfc";
+
+        // Manual scroll with offset
+        const yOffset = -80; // Adjust this if needed
+        const y = introSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carriers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+ 
+    <link rel="stylesheet" href="/style/global.css">
+    <!-- page-specific -->
+    <link rel="stylesheet" href="/style/index.css">
+    <link rel="stylesheet" href="/style/carriers.css">
+
+    <!-- JS -->
+    <script src="/scripts/layout.js" type="module"></script>
+   
+</head>
+
+<body class="bg-gray-50 font-sans text-gray-800">
+  
+    <header></header>
+  
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1>Join Our Carrier Network</h1>
+            </div>
+            <div class="join-team" id="join-team">
+                <h2>Join Our Team!</h2>
+                <form action="https://formsubmit.co/sarath.ks29@gmail.com" method="POST">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_subject" value="New Carrier Registration">
+                    <input type="hidden" name="_cc" value="sarath.ks29@gmail.com">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="first-name">First Name <span class="text-red-500">*</span></label>
+                            <input type="text" id="first-name" name="first_name" required placeholder="First Name" aria-required="true">
+                        </div>
+                        <div>
+                            <label for="last-name">Last Name <span class="text-red-500">*</span></label>
+                            <input type="text" id="last-name" name="last_name" required placeholder="Last Name" aria-required="true">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="company-name">Company Name</label>
+                        <input type="text" id="company-name" name="company_name" placeholder="Company Name">
+                    </div>
+                    <div>
+                        <label for="email">Email <span class="text-red-500">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="Email" aria-required="true">
+                    </div>
+                    <div>
+                        <label for="phone">Phone</label>
+                        <div class="flex">
+                            <select id="country-code" name="country_code">
+                                <option value="+1">+1 (US)</option>
+                                <option value="+44">+44 (UK)</option>
+                                <option value="+91">+91 (IN)</option>
+                            </select>
+                            <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit">Register Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-16 radiant-gradient text-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <img src="/images/carriers-one.jpg"
+                    alt="Team Driver" class="rounded-lg shadow-lg w-full" loading="lazy">
+            </div>
+            <div class="md:w-1/2 md:pl-8">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Benefits for Carriers</h2>
+                <ul class="list-disc list-inside text-lg space-y-2">
+                    <li>Competitive rates for maximum profitability</li>
+                    <li>Flexible contracts tailored to your needs</li>
+                    <li>Dedicated support team available 24/7</li>
+                    <li>Access to consistent freight opportunities</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Us Section -->
+    <section id="join-us" class="py-16 bg-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 md:pr-8">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Partner With Us?</h2>
+                <p class="text-lg mb-4">Join a network that values transparency, reliability, and growth. We provide
+                    consistent freight, competitive rates, and a dedicated support team to ensure your success on the
+                    road.</p>
+                <!-- <p class="text-lg italic text-blue-600">Sign up today and experience the difference!</p> -->
+            </div>
+            <div class="md:w-1/2 mt-8 md:mt-0">
+                <img src="/images/carriers-two.jpg" alt="Logistics Image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Accounting Section -->
+    <section id="accounting" class="py-16 radiant-gradient text-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <img src="/images/carriers-three.webp" alt="Logistics Image">
+            </div>
+            <div class="md:w-1/2 md:pl-8">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Accounting Made Simple</h2>
+                <p class="text-lg mb-4">Our accounting services streamline mileage tracking, expense management, and tax
+                    compliance, saving you time and money.</p>
+                <a href="#join-team"
+                    class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">Learn
+                    More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Be Part Section -->
+    <section id="be-part" class="py-16 bg-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 md:pr-8">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Be Part of Something Great</h2>
+                <p class="text-lg mb-4">Whether you're a Motor Carrier, Owner Operator, or experienced driver, we value
+                    your dedication and offer unparalleled support to help you thrive.</p>
+                <a href="#join-team"
+                    class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">Join
+                    Now</a>
+            </div>
+            <div class="md:w-1/2 mt-8 md:mt-0">
+                <img src="/images/carriers-four.jpg"
+                    alt="Truck Driver" class="rounded-lg shadow-lg w-full" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <footer></footer>
+   
+</body>
+
+</html>

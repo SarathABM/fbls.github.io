@@ -1,0 +1,585 @@
+/* Global Body Styles */
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(116, 113, 113, 0.5), rgba(0, 0, 0, 0.5)), url("/images/main-image.jpg") center/cover no-repeat;
+    min-height: 700px;
+}
+
+.hero-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+.hero .inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.hero-heading {
+    color: white;
+}
+
+.hero-heading p {
+    font-size: 2rem;
+}
+
+.hero-heading h1 {
+    font-size: 4rem;
+}
+
+.hero-heading h1 span {
+    color: #00a3e0;
+}
+
+/* Hero Cards Section */
+.hero-cards-section {
+    max-width: 100%;
+}
+
+.hero-card {
+    background: linear-gradient(90deg, #004986 0%, #00A3E0 100%);
+    color: rgb(11, 11, 11);
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.column {
+    flex: 1;
+    min-width: 0;
+    padding: 1rem;
+}
+
+.column h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.column p {
+    font-size: 1rem;
+    color: white;
+}
+
+/* Solutions Section */
+.solutions {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background: #fff;
+    color: rgb(11, 11, 11);
+    border-radius: 20px;
+    margin: 2rem auto;
+    max-width: 1350px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.solutions h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.grid-2 {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.grid-2 .left {
+    font-size: 3rem;
+}
+
+.solution-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.solution-card {
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 1fr 10fr;
+    gap: 1rem;
+}
+
+.solution-card img {
+    width: 100%;
+}
+
+.solution-card h4 {
+    font-size: 2rem;
+}
+
+.solution-card > div {
+    font-size: 1.4em;
+}
+
+/* Industries Section */
+.industries {
+    width: 100%;
+    margin: 0;
+    padding: 60px 0;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.industries h2 {
+    font-size: 2.8em;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.industry-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 500px; /* Match image height */
+}
+
+.industry-card {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 1s ease-in-out;
+}
+
+.industry-card img {
+    width: 100%;
+    height: 500px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    display: block;
+}
+
+.industry-card figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    text-align: left;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.industry-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.industry-card p {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.industry-card a {
+    text-decoration: none;
+    color: #00a3e0;
+    font-weight: 600;
+    font-size: 0.95em;
+    transition: color 0.2s ease;
+}
+
+.industry-card a:hover {
+    color: #0052cc;
+    text-decoration: underline;
+}
+
+/* Slideshow Classes */
+.industry-card.hidden {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.industry-card.visible {
+    opacity: 1;
+    position: relative;
+}
+
+/* Slideshow Dots */
+.slideshow-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #00a3e0;
+}
+
+.dot:hover {
+    background-color: #0052cc;
+}
+
+/* Quote Section */
+.quote {
+    padding: 2rem 1rem;
+    text-align: center;
+    background: #f8f9fa;
+}
+
+.quote .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.quote h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.quote-button {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.quote-button button {
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quote-button button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.quote-button button:focus {
+    outline: 2px solid #1e40af;
+    outline-offset: 2px;
+}
+
+.quote-button button:active {
+    transform: translateY(0);
+}
+
+.quote p {
+    font-size: 1.2rem;
+    margin: 1rem 0 0;
+    color: #333;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .hero {
+        min-height: 60vh;
+    }
+    
+    .hero-heading h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-heading p {
+        font-size: 1.8rem;
+    }
+    
+    .hero-card {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+    
+    .column {
+        flex: 1 1 45%;
+        min-width: 250px;
+    }
+    
+    .solutions h2 {
+        font-size: 2.5rem;
+    }
+    
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .grid-2 .left {
+        font-size: 2.2rem;
+    }
+    
+    .solution-card h4 {
+        font-size: 1.8rem;
+    }
+    
+    .solution-card > div {
+        font-size: 1.2rem;
+    }
+    
+    .industries h2 {
+        font-size: 2.2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 50vh;
+    }
+    
+    .hero .inner {
+        padding: 0 1rem;
+    }
+    
+    .hero-heading h1 {
+        font-size: 2.5rem;
+        padding-top: 10%;
+    }
+    
+    .hero-heading p {
+        font-size: 1.5rem;
+    }
+    
+    .hero-cards-section {
+        padding: 1rem;
+    }
+    
+    .column {
+        flex: 1 1 100%;
+        padding: 0.8rem;
+    }
+    
+    .column h3 {
+        font-size: 1.1rem;
+    }
+    
+    .column p {
+        font-size: 0.95rem;
+    }
+    
+    .solutions {
+        padding: 1.5rem 1rem;
+        margin: 1.5rem auto;
+    }
+    
+    .solutions h2 {
+        font-size: 2rem;
+    }
+    
+    .grid-2 .left {
+        font-size: 1.8rem;
+    }
+    
+    .solution-card h4 {
+        font-size: 1.5rem;
+    }
+    
+    .solution-card > div {
+        font-size: 1.1rem;
+    }
+    
+    .quote {
+        padding: 1.5rem 1rem;
+    }
+    
+    .quote h3 {
+        font-size: 1.8rem;
+    }
+    
+    .quote-button button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .quote p {
+        font-size: 1rem;
+    }
+    
+    .industries {
+        padding: 40px 0;
+    }
+    
+    .industries h2 {
+        font-size: 1.8em;
+    }
+    
+    .industry-cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        min-height: 350px;
+    }
+    
+    .industry-card img {
+        height: 350px;
+    }
+    
+    .slideshow-dots {
+        gap: 10px;
+        margin-top: 15px;
+    }
+    
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 40vh;
+    }
+    
+    .hero-heading h1 {
+        font-size: 1.8rem;
+        padding-top: 5%;
+    }
+    
+    .hero-heading p {
+        font-size: 1.2rem;
+    }
+    
+    .hero-cards-section {
+        padding: 0.8rem;
+    }
+    
+    .column {
+        padding: 0.6rem;
+    }
+    
+    .column h3 {
+        font-size: 1rem;
+    }
+    
+    .column p {
+        font-size: 0.9rem;
+    }
+    
+    .solutions {
+        padding: 1rem 0.8rem;
+        margin: 1rem auto;
+    }
+    
+    .solutions h2 {
+        font-size: 1.6rem;
+    }
+    
+    .grid-2 .left {
+        font-size: 1.4rem;
+    }
+    
+    .solution-card {
+        grid-template-columns: 1fr 8fr;
+        gap: 0.8rem;
+    }
+    
+    .solution-card h4 {
+        font-size: 1.2rem;
+    }
+    
+    .solution-card > div {
+        font-size: 1rem;
+    }
+    
+    .quote {
+        padding: 1rem 0.8rem;
+    }
+    
+    .quote h3 {
+        font-size: 1.5rem;
+    }
+    
+    .quote-button button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    
+    .quote p {
+        font-size: 0.9rem;
+    }
+    
+    .industries {
+        padding: 30px 0;
+    }
+    
+    .industries h2 {
+        font-size: 1.5em;
+    }
+    
+    .industry-card img {
+        height: 300px;
+    }
+    
+    .industry-card figcaption {
+        padding: 15px;
+    }
+    
+    .industry-card h3 {
+        font-size: 1.3em;
+    }
+    
+    .industry-card p {
+        font-size: 0.9em;
+    }
+    
+    .slideshow-dots {
+        gap: 8px;
+        margin-top: 10px;
+    }
+    
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .industry-cards {
+        min-height: 300px;
+    }
+}
