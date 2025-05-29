@@ -13,7 +13,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(116, 113, 113, 0.5), rgba(0, 0, 0, 0.5)), url("/images/About-BG-image.jpg") center/cover no-repeat;
+    background: linear-gradient(rgba(116, 113, 113, 0.5), rgba(0, 0, 0, 0.5)), url("/images/about-BG-image.jpg") center/cover no-repeat;
     color: #fff;
     text-align: center;
     padding: 6rem 1rem;
